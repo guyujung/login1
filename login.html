@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .input-box-group{
+        text-align:center;
+        width: 250px;
+        margin-top:9%;
+        margin-left:40%;
+        
+    }
+    h2{
+        text-align:center;
+        margin-top:40px;
+        margin-bottom:50px;
+    }
+    .input-box{
+        position: relative;
+        margin: 10px;  
+    }
+    .input-box>input{
+        background: transparent;
+        border:none;
+        border-bottom:solid 1px #ccc;
+        padding: 20px 0px 8px 0px;
+        font-size:7pt;
+        width:100%;
+    }
+    input::placeholder{
+        color:transparent;
+    }
+    input:placeholder-shown+label{
+        color:#aaa;
+        font-size:14pt;
+        top:15px;
+    }
+    input:focus + label, label{ color:#8aa1a1; font-size:10pt; pointer-events: none; position: absolute; left:0px; top:0px; transition: all 0.2s ease ; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; }
+    input:focus, input:not(:placeholder-shown){ border-bottom: solid 1px #8aa1a1; outline:none; }
+    #forgot{
+        
+        display:block;
+        margin-left:35%;
+        margin-top:25%;
+        font-size: 0.5px;
+
+    }
+    #login{
+        display:block;
+        margin-left:70%;
+    }
+</style>
+<body>
+    <h2> Login</h2>
+    <div class="input-box-group">
+        <form action="" method="POST">
+            
+                <div style="float:left">
+                    <div class="input-box" >
+                        <input type="text" id="username" name="username" placeholder="id">
+                        <label for="username">id</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="password" name="password" placeholder="password">
+                        <label for="password">password</label>
+                    </div>
+                </div>
+                <div style="float:left">
+                    <img src="image/frame.png" alt="qr login" width="100" height="100">
+                </div>
+        </form>
+    </div> 
+    
+    <div id="forgot">비밀번호 찾기</div>
+    <input id="login" type="submit" value="로그인">
+</body>
+</html>
+
+<!--jsfiddle.net/parkjiwon/atvy2cx9/
+
+출처: https://pannchat.tistory.com/entry/CSS-심플한-로그인폼-구현 [박지원]-->
